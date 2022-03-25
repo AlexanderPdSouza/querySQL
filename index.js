@@ -5,10 +5,10 @@ const port = 3000
 
 
 var con = mysql.createConnection({
-    host: "mysql24-farm10.kinghost.net",
-    user: "alexanderpdeso",
-    password: "Xaximalex10",
-    database: "alexanderpdeso"
+    host: "..",
+    user: "..",
+    password: "..",
+    database: ".."
 });
 
 var sqlQuery = "SELECT SUM(produtos.preco) as valor_compra, usuario.nome, compras.data_compra, produtos.produto_nome FROM item_compra LEFT JOIN compras on item_compra.id_compra = compras.id LEFT JOIN produtos on item_compra.id_produto = produtos.id LEFT JOIN usuario on compras.id_usuario = usuario.id where valor_compra > 30 group by usuario.nome, compras.data_compra"
